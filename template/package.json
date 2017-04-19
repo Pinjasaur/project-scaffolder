@@ -1,0 +1,10 @@
+{
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "repository": "{{owner}}/{{name}}",
+  "version": "0.0.0",
+  "license": "{{license}}",
+  {{#private}}
+  "private": true
+  {{/private}}
+}
