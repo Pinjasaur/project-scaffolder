@@ -7,5 +7,6 @@ Boilerplate to scaffold out my projects. Modified from this: https://github.com/
 1. `git clone` the repo
 2. `cd` to the repo root
 3. Run `yarn`
-4. `node build.js`
-5. Move the contents of the `scaffold/` to your desired place
+4. Run `node build.js`
+5. Answer the questions
+6. Move the contents of the `scaffold/` to your desired place
