@@ -6,7 +6,6 @@ var render = require("consolidate").handlebars.render;
 /**
  * Build.
  */
-
 var metalsmith = Metalsmith(__dirname)
   .source("template")
   .destination("scaffold")
@@ -23,9 +22,8 @@ var metalsmith = Metalsmith(__dirname)
  * @param {Metalsmith} metalsmith
  * @param {Function} done
  */
-
 function ask(files, metalsmith, done){
-  var prompts = ["name", "owner", "author", "description", "private [y/n]", "license"];
+  var prompts = ["name", "owner", "author", "description", "private", "license"];
   var metadata = metalsmith.metadata();
 
   async.eachSeries(prompts, run, done);
@@ -33,8 +31,8 @@ function ask(files, metalsmith, done){
   function run(key, done){
     prompt(`${key}: `, function(val){
       // Treat 'private' as a boolean
-      if (key === "private [y/n]") {
-        val = /^y(es)?$/i.test(val);
+      if (key === "private") {
+        val = /^((t(rue)?|y(es)?))$/i.test(val);
       }
       metadata[key] = val;
       done();
@@ -49,7 +47,6 @@ function ask(files, metalsmith, done){
  * @param {Metalsmith} metalsmith
  * @param {Function} done
  */
-
 function template(files, metalsmith, done){
   var keys = Object.keys(files);
   var metadata = metalsmith.metadata();
