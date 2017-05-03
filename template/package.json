@@ -1,8 +1,11 @@
 {
-  "name": "test-project",
-  "description": "testing the thing",
-  "repository": "Paul/test-project",
-  "license": "MIT",
+  "name": "{{name}}",
+  "description": "{{description}}",
+  "repository": "{{owner}}/{{name}}",
+  "license": "{{license}}",
+  {{#private}}
+  "private": true,
+  {{/private}}
   "scripts": {
     "postinstall": "bower install"
   },
