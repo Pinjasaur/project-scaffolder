@@ -61,7 +61,7 @@ gulp.task("build:size", task("build:size"));
 gulp.task("build", ["clean"], task("build"));
 
 // Zip up production build
-gulp.task("zip", ["build"], task("zip"));
+gulp.task("zip", task("zip"));
 
 // Spins up local server
 gulp.task("server", ["build"], task("server"));
