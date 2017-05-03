@@ -1,0 +1,25 @@
+/**
+ * Creates media-queries for breakpoints given an expression formatted like:
+ *   (<|>)(keyword/units)
+ *   Example: <sm or >1337px
+ */
+@mixin bp($expression) {
+  $direction: str-slice($expression, 0, 1);
+  $point: str-slice($expression, 2);
+
+  @if map-has-key($breakpoints, $point) {
+    $point: map-get($breakpoints, $point);
+  }
+
+  @if $direction == ">" {
+    $direction: min;
+  } @else if $direction == "<" {
+    $direction: max;
+  } @else {
+    @error "Invalid directive. Expected < or >, got: #{$direction}";
+  }
+
+  @media (#{$direction}-width: #{$point}) {
+    @content;
+  }
+}

@@ -1,0 +1,30 @@
+%clearfix,
+.clearfix {
+  &:after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+.push-left {
+  float: left !important;
+}
+
+.push-right {
+  float: right !important;
+}
+
+@each $break, $point in $breakpoints {
+  .is-hidden-#{$break} {
+    @include bp("<#{$break}") {
+      display: none !important;
+    }
+  }
+
+  .is-visible-#{$break} {
+    @include bp(">#{$break}") {
+      display: none !important;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  /**
+   * Box-sizing best-practices from CSS-Tricks.
+   * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+   */
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+::selection {
+  background: $color-primary;
+  color: $accent-light;
+  text-shadow: none;
+}

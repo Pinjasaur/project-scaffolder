@@ -1,0 +1,20 @@
+$breakpoints: (
+  xs: 250px,
+  sm: 500px,
+  md: 800px,
+  lg: 1100px,
+  xl: 1400px,
+  2x: 1920px,
+  3x: 2560px
+);
+
+$accent-dark:  lighten(#000, 3%);
+$accent-light: darken(#fff,  3%);
+
+$color-primary:   #bada55;
+$color-secondary: #123456;
+$color-tertiary:  #654321;
+
+$font-primary:   Helvetica, sans-serif;
+$font-secondary: Georgia, serif;
+$font-tertiary:  Inconsolata, monospace;

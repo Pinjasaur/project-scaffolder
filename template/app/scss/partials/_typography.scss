@@ -1,0 +1,16 @@
+html {
+  color: $accent-dark;
+  font-family: $font-primary;
+  line-height: 1.5;
+  font-size: calc(.75em + .35vw);
+  background: $accent-light;
+}
+
+// h1..h6 element and class selectors
+@for $i from 6 through 1 {
+  h#{$i},
+  .h#{$i} {
+    font-family: $font-secondary;
+    font-size: (3.5em - ($i * .5));
+  }
+}
