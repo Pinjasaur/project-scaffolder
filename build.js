@@ -25,7 +25,7 @@ var metalsmith = Metalsmith(__dirname)
  */
 
 function ask(files, metalsmith, done){
-  var prompts = ["name", "owner", "description", "private [y/n]", "license"];
+  var prompts = ["name", "owner", "author", "description", "private [y/n]", "license"];
   var metadata = metalsmith.metadata();
 
   async.eachSeries(prompts, run, done);

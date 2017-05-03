@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return () => {
-    const {gulp, plugins, config, paths, production, root, server} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     return gulp.src(`${paths.src}/icons/**/*.svg`)
       .pipe(plugins.imagemin([

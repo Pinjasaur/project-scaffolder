@@ -21,16 +21,7 @@ const production = (plugins.util.env.prod || plugins.util.env.production) ? true
 const paths      = require("./gulp/paths");
 const root       = (production) ? paths.dist : paths.tmp;
 const config     = require("./gulp/config")(plugins, root, version);
-const params     = {
-  gulp: gulp,
-  plugins: plugins,
-  config: config,
-  paths: paths,
-  production: production,
-  root: root,
-  server: server,
-  version: version
-};
+const params     = {gulp, plugins, config, paths, production, root, server, version, pkg};
 
 function task(task) {
   return require(`./gulp/tasks/${task.replace(/:/g, "/")}`)(params);
@@ -53,6 +44,9 @@ gulp.task("build:svg", task("build:svg"));
 
 // Copy fonts
 gulp.task("build:fonts", task("build:fonts"));
+
+// Copy humans.txt
+gulp.task("build:humans.txt", task("build:humans.txt"));
 
 // Revision assets
 gulp.task("build:rev", task("build:rev"));

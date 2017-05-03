@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return () => {
-    const {gulp, plugins, config, paths, production, root, server} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     return gulp.src(`${paths.src}/${paths.css.src}/${paths.css.entry}`)
       .pipe(plugins.plumber())

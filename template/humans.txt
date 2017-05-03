@@ -1,0 +1,22 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    {{author}}
+
+
+# THANKS
+
+    Stack Overflow
+    Caffeine
+
+# SITE
+
+    Last update: 0000/00/00
+    Standards: HTML5, CSS3
+    Components:
+      - Front-end: jQuery, Normalize.css, Mustache.js
+      - Back-end: ?
+    Tools: Yarn, Bower, Gulp
+    Software: Atom, Sublime Text, GitHub Desktop

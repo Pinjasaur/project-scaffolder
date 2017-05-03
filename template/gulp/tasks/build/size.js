@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return () => {
-    const {gulp, plugins, config, paths, production, root, server} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     const size = plugins.size();
 

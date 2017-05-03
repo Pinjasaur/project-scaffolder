@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return () => {
-    const {gulp, plugins, config, paths, production, root, server, version} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     let env = plugins.util.env,
         colors = plugins.util.colors,

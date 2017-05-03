@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return (done) => {
-    const {gulp, plugins, config, paths, production, root, server} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     if (production) {
       plugins.runSequence(
@@ -9,7 +9,8 @@ module.exports = (params) => {
           "build:js",
           "build:img",
           "build:svg",
-          "build:fonts"
+          "build:fonts",
+          "build:humans.txt"
         ],
         "build:html",
         "build:rev",

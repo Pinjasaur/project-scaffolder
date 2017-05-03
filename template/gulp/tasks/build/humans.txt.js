@@ -2,13 +2,7 @@ module.exports = (params) => {
   return () => {
     const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
-    return gulp.src(`${paths.tmp}/**`)
-      .pipe(plugins.revAll.revision({
-        dontRenameFile: [
-          /\.html/g,
-          /favicon.ico/g
-        ]
-      }))
+    return gulp.src(`./humans.txt`)
       .pipe(gulp.dest(paths.dist));
   };
 };

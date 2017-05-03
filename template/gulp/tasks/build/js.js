@@ -1,6 +1,6 @@
 module.exports = (params) => {
   return () => {
-    const {gulp, plugins, config, paths, production, root, server} = params;
+    const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
     // Ignore JS in the js/vendor directory since we didn't author it
     gulp.src([
