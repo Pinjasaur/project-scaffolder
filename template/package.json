@@ -1,11 +1,8 @@
 {
-  "name": "{{name}}",
-  "description": "{{description}}",
-  "repository": "{{owner}}/{{name}}",
-  "license": "{{license}}",
-  {{#private}}
-  "private": true,
-  {{/private}}
+  "name": "test-project",
+  "description": "testing the thing",
+  "repository": "Paul/test-project",
+  "license": "MIT",
   "scripts": {
     "postinstall": "bower install"
   },
@@ -32,9 +29,9 @@
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
     "gulp-rev-all": "^0.9.7",
-    "gulp-sass": "^2.3.2",
+    "gulp-sass": "^3.1.0",
     "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^1.7.3",
+    "gulp-sourcemaps": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.0.0",
     "gulp-useref": "^3.1.2",
