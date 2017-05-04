@@ -37,6 +37,7 @@
     "gulp-sourcemaps": "^2.6.0",
     "gulp-svgstore": "^6.1.0",
     "gulp-uglify": "^2.0.0",
+    "gulp-update-humanstxt-date": "^1.0.2",
     "gulp-useref": "^3.1.2",
     "gulp-util": "^3.0.7",
     "gulp-zip": "^4.0.0",

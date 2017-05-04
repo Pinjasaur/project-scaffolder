@@ -2786,6 +2786,14 @@ gulp-uglify@^2.0.0:
     uglify-save-license "^0.4.1"
     vinyl-sourcemaps-apply "^0.2.0"
 
+gulp-update-humanstxt-date@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/gulp-update-humanstxt-date/-/gulp-update-humanstxt-date-1.0.2.tgz#2081226f27b2609336413dd06c9cff89214a41a9"
+  dependencies:
+    gulp-util "^3.0.7"
+    moment "^2.17.1"
+    through2 "^2.0.1"
+
 gulp-useref@^3.1.2:
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/gulp-useref/-/gulp-useref-3.1.2.tgz#dec67024a96e685eeb9d9d8153c64a5d5c5e3cf6"
@@ -4209,6 +4217,10 @@ module-deps@^4.0.8:
     subarg "^1.0.0"
     through2 "^2.0.0"
     xtend "^4.0.0"
+
+moment@^2.17.1:
+  version "2.18.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.18.1.tgz#c36193dd3ce1c2eed2adb7c802dbbc77a81b1c0f"
 
 ms@0.7.1:
   version "0.7.1"
