@@ -1,4 +1,4 @@
-module.exports = (plugins, root, version) => {
+module.exports = (plugins, root, version, pkg) => {
   return {
     autoprefixer: {
       browsers: [

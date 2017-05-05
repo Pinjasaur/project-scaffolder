@@ -20,14 +20,14 @@ const version    = require("fs").readFileSync("./VERSION").toString();
 const production = (plugins.util.env.prod || plugins.util.env.production) ? true : false;
 const paths      = require("./gulp/paths");
 const root       = (production) ? paths.dist : paths.tmp;
-const config     = require("./gulp/config")(plugins, root, version);
+const config     = require("./gulp/config")(plugins, root, version, pkg);
 const params     = {gulp, plugins, config, paths, production, root, server, version, pkg};
 
 function task(task) {
   return require(`./gulp/tasks/${task.replace(/:/g, "/")}`)(params);
 }
 
-// "Build" HTML files: optimize JS, CSS, HTML,
+// "Build" HTML files: optimize JS, CSS, HTML
 gulp.task("build:html", task("build:html"));
 
 // Build the SCSS (Autoprefixer, Sourcemaps)
