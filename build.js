@@ -24,12 +24,20 @@ var metalsmith = Metalsmith(__dirname)
  */
 function ask(files, metalsmith, done){
   var prompts = ["name", "owner", "author", "description", "private", "license"];
+  var hints = {
+    "name": "project/repo",
+    "owner": "GitHub user/org",
+    "author": "your name",
+    "description": "short 'n sweet",
+    "private": "package managers",
+    "license": "MIT, ISC, etc."
+  };
   var metadata = metalsmith.metadata();
 
   async.eachSeries(prompts, run, done);
 
   function run(key, done){
-    prompt(`${key}: `, function(val){
+    prompt(`${key} (${hints[key]}): `, function(val){
       // Treat 'private' as a boolean
       if (key === "private") {
         val = /^((t(rue)?|y(es)?))$/i.test(val);
