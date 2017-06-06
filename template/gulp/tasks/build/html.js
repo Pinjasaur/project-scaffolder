@@ -24,13 +24,6 @@ module.exports = (params) => {
           });
 
     return gulp.src(`${paths.src}/*.html`)
-      .pipe(plugins.inject(
-        gulp.src(`${paths.src}/templates/**`), {
-          starttag: "<!-- inject:template -->",
-          transform: function(path, file) {
-            return file.contents.toString();
-        }})
-      )
       .pipe(plugins.if(production, useref()))
       .pipe(gulp.dest(paths.tmp))
       .pipe(plugins.if(!production, server.stream()));
