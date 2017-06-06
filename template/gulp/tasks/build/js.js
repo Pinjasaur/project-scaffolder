@@ -25,7 +25,7 @@ module.exports = (params) => {
       .pipe(plugins.vinylSourceStream(paths.js.entry))
       .pipe(plugins.vinylBuffer())
       .pipe(plugins.sourcemaps.init({ loadMaps: true }))
-      .pipe(plugins.sourcemaps.write())
+      .pipe(plugins.sourcemaps.write("./"))
       .pipe(gulp.dest(`${paths.tmp}/${paths.js.dist}`))
       .pipe(plugins.if(!production, server.stream()));
   };
