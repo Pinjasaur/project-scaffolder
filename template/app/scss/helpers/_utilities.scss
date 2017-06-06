@@ -11,13 +11,13 @@
 }
 
 @each $break, $point in $breakpoints {
-  .is-hidden-#{$break} {
+  .hidden\@#{$break} {
     @include bp("<#{$break}") {
       display: none !important;
     }
   }
 
-  .is-visible-#{$break} {
+  .visible\@#{$break} {
     @include bp(">#{$break}") {
       display: none !important;
     }
