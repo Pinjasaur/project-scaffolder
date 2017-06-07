@@ -23,7 +23,7 @@ module.exports = (params) => {
       .pipe(plugins.rename({ prefix: "icon-" }))
       .pipe(plugins.svgstore())
       .pipe(plugins.rename({ basename: "map" }))
-      .pipe(gulp.dest(paths.tmp))
+      .pipe(gulp.dest(paths.www))
       .pipe(plugins.if(!production, server.stream()));
   };
 };

@@ -1,7 +1,8 @@
 module.exports = {
-  src: "./app",
-  dist: "./_build",
-  tmp: "./_tmp",
+  src: "app",
+  dist: "_dist",
+  www: "_www",
+  tmp: "_tmp",
   css: {
     entry: "app.scss",
     src: "scss",

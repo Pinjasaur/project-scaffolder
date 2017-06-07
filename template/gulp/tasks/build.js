@@ -5,14 +5,17 @@ module.exports = (params) => {
     if (production) {
       plugins.runSequence(
         [
-          "build:css",
+          "build:sass",
           "build:js",
+          "build:nunjucks"
+        ],
+        [
+          "build:useref",
           "build:img",
           "build:svg",
           "build:fonts",
           "build:humans.txt"
         ],
-        "build:html",
         "build:rev",
         "build:version",
         "build:size",
@@ -21,8 +24,8 @@ module.exports = (params) => {
     } else {
       plugins.runSequence(
         [
-          "build:html",
-          "build:css",
+          "build:nunjucks",
+          "build:sass",
           "build:js",
           "build:img",
           "build:svg",

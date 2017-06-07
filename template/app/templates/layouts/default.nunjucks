@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{name}}</title>
     <!-- build:css css/app.css -->
-    <link rel="stylesheet" href="components/normalize-css/normalize.css">
     <link rel="stylesheet" href="css/app.css">
     <!-- endbuild -->
   </head>

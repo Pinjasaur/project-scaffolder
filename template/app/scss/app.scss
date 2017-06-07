@@ -2,9 +2,12 @@
  * Sass entry file.
  */
 
+@charset "UTF-8";
+
 /**
  * Vendor @imports.
  */
+@import "../components/normalize-css/normalize";
 // @import "vendor/html5-boilerplate";
 
 /**

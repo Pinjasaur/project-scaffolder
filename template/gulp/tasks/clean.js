@@ -4,6 +4,7 @@ module.exports = (params) => {
 
     return gulp.src([
         paths.dist,
+        paths.www,
         paths.tmp
       ], {
         read: false

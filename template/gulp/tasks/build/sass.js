@@ -11,7 +11,7 @@ module.exports = (params) => {
       .pipe(plugins.autoprefixer(config.autoprefixer))
       .pipe(plugins.sourcemaps.write("."))
       .pipe(plugins.plumber.stop())
-      .pipe(plugins.if(production, gulp.dest(`${paths.src}/${paths.css.dist}`), gulp.dest(`${paths.tmp}/${paths.css.dist}`)))
+      .pipe(gulp.dest(`${paths.www}/${paths.css.dist}`))
       .pipe(plugins.if(!production, server.stream({ match: "**/*.css"})));
   };
 };

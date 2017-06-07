@@ -2,8 +2,11 @@ module.exports = (params) => {
   return () => {
     const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
-    return gulp.src(`${paths.src}/fonts/**/*.+(eot|woff2|woff|ttf|svg)`)
-      .pipe(plugins.if(production, gulp.dest(`${paths.tmp}/fonts`), gulp.dest(`${paths.www}/fonts`)))
+    return gulp.src(`${paths.src}/*.+(njk|html|nunjucks)`)
+      .pipe(plugins.nunjucksRender({
+        path: ["app/templates"]
+      }))
+      .pipe(gulp.dest(paths.www))
       .pipe(plugins.if(!production, server.stream()));
   };
 };

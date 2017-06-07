@@ -4,7 +4,7 @@ module.exports = (params) => {
 
     gulp.watch(`${paths.css.src}/**/*.scss`, {
       cwd: `${paths.src}/`
-    }, ["build:css"]);
+    }, ["build:sass"]);
 
     gulp.watch(`${paths.js.src}/**/*.js`, {
       cwd: `${paths.src}/`
@@ -24,6 +24,6 @@ module.exports = (params) => {
 
     gulp.watch(`*.+(njk|html|nunjucks)`, {
       cwd: `${paths.src}/`
-    }, ["build:html"]);
+    }, ["build:nunjucks"]);
   };
 };

@@ -19,7 +19,7 @@ const pkg        = require("./package.json");
 const version    = require("fs").readFileSync("./VERSION").toString();
 const production = (plugins.util.env.prod || plugins.util.env.production) ? true : false;
 const paths      = require("./gulp/paths");
-const root       = (production) ? paths.dist : paths.tmp;
+const root       = (production) ? paths.dist : paths.www;
 const config     = require("./gulp/config")(plugins, root, version, pkg);
 const params     = {gulp, plugins, config, paths, production, root, server, version, pkg};
 
@@ -28,10 +28,13 @@ function task(task) {
 }
 
 // "Build" HTML files: optimize JS, CSS, HTML
-gulp.task("build:html", task("build:html"));
+gulp.task("build:useref", task("build:useref"));
+
+// Compile Nunjucks templates
+gulp.task("build:nunjucks", task("build:nunjucks"));
 
 // Build the SCSS (Autoprefixer, Sourcemaps)
-gulp.task("build:css", task("build:css"));
+gulp.task("build:sass", task("build:sass"));
 
 // Build the JS (lint)
 gulp.task("build:js", task("build:js"));

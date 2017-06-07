@@ -18,7 +18,7 @@ module.exports = (params) => {
       .pipe(plugins.vinylBuffer())
       .pipe(plugins.sourcemaps.init({ loadMaps: true }))
       .pipe(plugins.sourcemaps.write("./"))
-      .pipe(gulp.dest(`${paths.tmp}/${paths.js.dist}`))
+      .pipe(gulp.dest(`${paths.www}/${paths.js.dist}`))
       .pipe(plugins.if(!production, server.stream()));
   };
 };
