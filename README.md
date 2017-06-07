@@ -10,9 +10,10 @@ Tons of automagic&trade; features, including&hellip;
 - Browser-Sync server with _live-reloading_
 - **Nunjucks** templating
 - Compile **Sass** (includes _Autoprefixer_ and sourcemaps)
-- **Transpile ES6** with Sourcemaps
+- **Transpile ES6** with Babel (includes sourcemaps)
 - Image optimization & compression
 - **SVG spritesheet** generation
+- Simple **semver** management
 
 ## Usage
 
