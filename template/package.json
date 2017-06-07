@@ -1,6 +1,7 @@
 {
   "name": "{{name}}",
   "description": "{{description}}",
+  "author": "{{author}}",
   "repository": "{{owner}}/{{name}}",
   "license": "{{license}}",
   {{#private}}

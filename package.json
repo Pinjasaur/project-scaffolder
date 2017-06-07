@@ -1,6 +1,13 @@
 {
   "name": "project-scaffolder",
+  "description": "Full-featured scaffolder for static projects.",
+  "author": "Paul Esch-Laurent",
+  "repository": "Pinjasaur/project-scaffolder",
+  "license": "MIT",
   "private": true,
+  "scripts": {
+    "start": "node build.js"
+  },
   "dependencies": {
     "async": "^2.3.0",
     "cli-prompt": "^0.6.0",
