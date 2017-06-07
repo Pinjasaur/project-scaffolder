@@ -1,6 +1,10 @@
-# project-scaffolder
+# project-scaffolder <img align="right" src="http://forthebadge.com/images/badges/contains-cat-gifs.svg">
 
-Boilerplate to scaffold out my projects. Modified from this: https://github.com/segmentio/metalsmith/tree/master/examples/project-scaffolder
+> Because you want to start Your Next Project&trade; right **meow**.
+
+<p align="center">
+  <img src="https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif">
+</p>
 
 ## Features
 
@@ -23,6 +27,10 @@ Tons of automagic&trade; features, including&hellip;
 4. Run `node build.js`
 5. Answer the questions
 6. Move the contents of the `scaffold/` to your desired place
+
+## Credit
+
+Modified from [segmentio/metalsmith](https://github.com/segmentio/metalsmith/tree/master/examples/project-scaffolder).
 
 ## License
 
