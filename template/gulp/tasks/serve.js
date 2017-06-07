@@ -2,11 +2,11 @@ module.exports = (params) => {
   return () => {
     const {gulp, plugins, config, paths, production, root, server, version, pkg} = params;
 
-    gulp.watch(`scss/**/*.scss`, {
+    gulp.watch(`${paths.css.src}/**/*.scss`, {
       cwd: `${paths.src}/`
     }, ["build:css"]);
 
-    gulp.watch(`js/**/*.js`, {
+    gulp.watch(`${paths.js.src}/**/*.js`, {
       cwd: `${paths.src}/`
     }, ["build:js"]);
 
@@ -22,7 +22,7 @@ module.exports = (params) => {
       cwd: `${paths.src}/`
     }, ["build:fonts"]);
 
-    gulp.watch(`*.html`, {
+    gulp.watch(`*.+(njk|html|nunjucks)`, {
       cwd: `${paths.src}/`
     }, ["build:html"]);
   };

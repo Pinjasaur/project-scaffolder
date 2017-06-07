@@ -12,7 +12,9 @@
   </head>
   <body>
 
-    <p>{{description}}</p>
+    {% block content %}{% endblock %}
+
+    {% block templates %}{% endblock %}
 
     <!-- build:js js/app.js -->
     <script src="components/jquery/dist/jquery.js"></script>

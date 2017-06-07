@@ -23,7 +23,10 @@ module.exports = (params) => {
             )
           });
 
-    return gulp.src(`${paths.src}/*.html`)
+    return gulp.src(`${paths.src}/*.+(njk|html|nunjucks)`)
+      .pipe(plugins.nunjucksRender({
+        path: ["app/templates"]
+      }))
       .pipe(plugins.if(production, useref()))
       .pipe(gulp.dest(paths.tmp))
       .pipe(plugins.if(!production, server.stream()));
