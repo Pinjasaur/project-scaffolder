@@ -5,7 +5,7 @@ module.exports = (params) => {
     if (production) {
       plugins.runSequence(
         [
-          "build:css",
+          "build:sass",
           "build:js",
           "build:img",
           "build:svg",
@@ -22,7 +22,7 @@ module.exports = (params) => {
       plugins.runSequence(
         [
           "build:html",
-          "build:css",
+          "build:sass",
           "build:js",
           "build:img",
           "build:svg",

@@ -31,7 +31,7 @@ function task(task) {
 gulp.task("build:html", task("build:html"));
 
 // Build the SCSS (Autoprefixer, Sourcemaps)
-gulp.task("build:css", task("build:css"));
+gulp.task("build:sass", task("build:sass"));
 
 // Build the JS (lint)
 gulp.task("build:js", task("build:js"));
