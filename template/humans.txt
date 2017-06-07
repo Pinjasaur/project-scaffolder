@@ -5,7 +5,6 @@
 
     {{author}}
 
-
 # THANKS
 
     Stack Overflow
@@ -14,9 +13,9 @@
 # SITE
 
     Last update: 0000/00/00
-    Standards: HTML5, CSS3
+    Standards: HTML5, CSS3, ES6
     Components:
-      - Front-end: jQuery, Normalize.css, Mustache.js
+      - Front-end: ?
       - Back-end: ?
-    Tools: Yarn, Bower, Gulp
-    Software: Atom, Sublime Text, GitHub Desktop
+    Tools: ?
+    Software: ?
