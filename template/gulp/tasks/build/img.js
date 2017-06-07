@@ -4,7 +4,6 @@ module.exports = (params) => {
 
     return gulp.src(`${paths.src}/img/**/*.+(jpg|jpeg|gif|png|svg)`)
       .pipe(plugins.imagemin(config.imagemin))
-      .pipe(plugins.if(production, gulp.dest(`${paths.tmp}/img`), gulp.dest(`${paths.www}/img`)))
-      .pipe(plugins.if(!production, server.stream()));
+      .pipe(plugins.if(production, gulp.dest(`${paths.tmp}/img`), gulp.dest(`${paths.www}/img`)));
   };
 };

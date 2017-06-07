@@ -27,6 +27,11 @@ function task(task) {
   return require(`./gulp/tasks/${task.replace(/:/g, "/")}`)(params);
 }
 
+
+/**
+ * Build-related tasks.
+ */
+
 // "Build" HTML files: optimize JS, CSS, HTML
 gulp.task("build:useref", task("build:useref"));
 
@@ -63,6 +68,31 @@ gulp.task("build:size", task("build:size"));
 // Build task
 gulp.task("build", ["clean"], task("build"));
 
+
+/**
+ * Watch-related tasks.
+ */
+
+// Reloads browser after build:nunjucks
+gulp.task("watch:nunjucks", ["build:nunjucks"], task("watch:nunjucks"));
+
+// Reloads browser after build:js
+gulp.task("watch:js", ["build:js"], task("watch:js"));
+
+// Reloads browser after build:img
+gulp.task("watch:img", ["build:img"], task("watch:img"));
+
+// Reloads browser after build:svg
+gulp.task("watch:svg", ["build:svg"], task("watch:svg"));
+
+// Reloads browser after build:fonts
+gulp.task("watch:fonts", ["build:fonts"], task("watch:fonts"));
+
+
+/**
+ * Standalone tasks.
+ */
+
 // Zip up production build
 gulp.task("zip", task("zip"));
 
@@ -72,7 +102,7 @@ gulp.task("server", ["build"], task("server"));
 // Build assets and spin up server
 gulp.task("serve", ["server"], task("serve"));
 
-// Clean the dist directory
+// Clean directories that are built
 gulp.task("clean", task("clean"));
 
 // Bump the version

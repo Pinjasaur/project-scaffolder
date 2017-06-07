@@ -8,22 +8,22 @@ module.exports = (params) => {
 
     gulp.watch(`${paths.js.src}/**/*.js`, {
       cwd: `${paths.src}/`
-    }, ["build:js"]);
+    }, ["watch:js"]);
 
     gulp.watch(`img/**`, {
       cwd: `${paths.src}/`
-    }, ["build:img"]);
+    }, ["watch:img"]);
 
     gulp.watch(`icons/**`, {
       cwd: `${paths.src}/`
-    }, ["build:svg"]);
+    }, ["watch:svg"]);
 
     gulp.watch(`fonts/**`, {
       cwd: `${paths.src}/`
-    }, ["build:fonts"]);
+    }, ["watch:fonts"]);
 
     gulp.watch(`*.+(njk|html|nunjucks)`, {
       cwd: `${paths.src}/`
-    }, ["build:nunjucks"]);
+    }, ["watch:nunjucks"]);
   };
 };

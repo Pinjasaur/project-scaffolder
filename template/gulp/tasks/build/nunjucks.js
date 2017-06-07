@@ -6,7 +6,6 @@ module.exports = (params) => {
       .pipe(plugins.nunjucksRender({
         path: ["app/templates"]
       }))
-      .pipe(gulp.dest(paths.www))
-      .pipe(plugins.if(!production, server.stream()));
+      .pipe(gulp.dest(paths.www));
   };
 };
