@@ -2,6 +2,18 @@
 
 Boilerplate to scaffold out my projects. Modified from this: https://github.com/segmentio/metalsmith/tree/master/examples/project-scaffolder
 
+## Features
+
+Tons of automagic&trade; features, including&hellip;
+
+- Production builds with **minified and revisioned** assets
+- Browser-Sync server with _live-reloading_
+- **Nunjucks** templating
+- Compile **Sass** (includes _Autoprefixer_ and sourcemaps)
+- **Transpile ES6** with Sourcemaps
+- Image optimization & compression
+- **SVG spritesheet** generation
+
 ## Usage
 
 1. `git clone` the repo
@@ -10,3 +22,7 @@ Boilerplate to scaffold out my projects. Modified from this: https://github.com/
 4. Run `node build.js`
 5. Answer the questions
 6. Move the contents of the `scaffold/` to your desired place
+
+## License
+
+[MIT](/LICENSE)
